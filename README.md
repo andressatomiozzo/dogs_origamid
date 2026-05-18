@@ -35,6 +35,15 @@ Rede social para cachorros.
 
 ---
 
+## 👤 Como interagir com o projeto
+
+Usuário padrão: dog
+Senha: dog
+
+* O site é construído a partir de uma API pública, dados não padrão adicionados são excluídos a cada 10 minutos.
+
+---
+
 ## ⚙️ Como rodar o projeto
 
 ```bash

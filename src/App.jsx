@@ -1,9 +1,11 @@
 // import React from 'react'
 
+import Api from "./api/Api"
+
 const App = () => {
   return (
     <div>
-      oie
+      <Api />
     </div>
   )
 }
