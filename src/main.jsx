@@ -1,11 +1,11 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
-import Api from "./api/Api";
+// import Api from "./api/Api";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <App />
-    <Api />
+    {/* <Api /> */}
   </StrictMode>,
 );
