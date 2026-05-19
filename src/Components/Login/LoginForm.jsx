@@ -3,31 +3,38 @@ import { Link } from "react-router-dom";
 import Input from "../Form/Input";
 import Button from "../Form/Button";
 import useForm from "../../Hooks/useForm";
+import { TOKEN_POST, USER_GET } from "../../api";
 
 const LoginForm = () => {
   const username = useForm();
   const password = useForm();
+  
+  const getUser = async (token) => {
+    const { url, options } = USER_GET(token);
+    const response = await fetch(url, options);
+    const json = await response.json();
+    console.log(json);
+  };
+
+  React.useEffect(() => {
+    const token = window.localStorage.getItem('token');
+    if (token) {
+      getUser(token);
+    }
+  }, []);
 
   const sendData = async () => {
-    let response;
-    let json;
+    const { url, options } = TOKEN_POST({ username: username.value, password: password.value });
     try {
-      response = await fetch(`https://dogsapi.origamid.dev/json/jwt-auth/v1/token`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(),
-      });
-      json = await response.json();
+      const response = await fetch(url, options);
+      const json = await response.json();
       if (!response.ok) {
         throw new Error("OPS, algo deu errado na API");
       }
+      window.localStorage.setItem("token", json.token);
+      getUser(json.token);
     } catch (err) {
       console.log(err);
-    } finally {
-      console.log(response);
-      console.log(json);
     }
   };
 
