@@ -3,45 +3,18 @@ import { Link } from "react-router-dom";
 import Input from "../Form/Input";
 import Button from "../Form/Button";
 import useForm from "../../Hooks/useForm";
-import { TOKEN_POST, USER_GET } from "../../api";
+import UserContext from "../../createContext/UserContext";
 
 const LoginForm = () => {
   const username = useForm();
   const password = useForm();
+
+  const {userLogin} = React.useContext(UserContext)
   
-  const getUser = async (token) => {
-    const { url, options } = USER_GET(token);
-    const response = await fetch(url, options);
-    const json = await response.json();
-    console.log(json);
-  };
-
-  React.useEffect(() => {
-    const token = window.localStorage.getItem('token');
-    if (token) {
-      getUser(token);
-    }
-  }, []);
-
-  const sendData = async () => {
-    const { url, options } = TOKEN_POST({ username: username.value, password: password.value });
-    try {
-      const response = await fetch(url, options);
-      const json = await response.json();
-      if (!response.ok) {
-        throw new Error("OPS, algo deu errado na API");
-      }
-      window.localStorage.setItem("token", json.token);
-      getUser(json.token);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     if (username.validate() && password.validate()) {
-      sendData();
+      userLogin(username.value, password.value);
     }
   };
 
