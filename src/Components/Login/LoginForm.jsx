@@ -9,7 +9,7 @@ const LoginForm = () => {
   const username = useForm();
   const password = useForm();
 
-  const {userLogin} = React.useContext(UserContext)
+  const {userLogin, error, loading} = React.useContext(UserContext)
   
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -24,7 +24,8 @@ const LoginForm = () => {
       <form onSubmit={handleSubmit}>
         <Input label="Usuário" type="text" id="username" {...username} />
         <Input label="Senha" type="password" id="password" {...password} />
-        <Button>Entrar</Button>
+        {loading ? <Button disabled>Carregando...</Button> : <Button>Entrar</Button>}
+        {error && <p>{error}</p>}
       </form>
 
       <Link to={"/login/perdeu"}>Perdeu a Senha?</Link>
