@@ -64,27 +64,18 @@ npm run dev
 
 ## 🧠 Aprendizados
 
-Descreva o que você aprendeu com esse projeto:
-
 * Trabalhar com estado no React
 * Manipulação de DOM
 * Consumo de API
 * Organização de código
+* Utilização de variáveis globais (createContext e useContext)
 
 ---
 
 ## 🛠️ Melhorias futuras
 
-* [ ] Responsividade
 * [ ] Testes automatizados
-* [ ] Integração com backend
 * [ ] Dark mode
-
----
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT.
 
 ---
 
