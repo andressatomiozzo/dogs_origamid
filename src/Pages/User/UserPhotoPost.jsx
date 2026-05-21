@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./UserPhotoPost.module.css";
-import Input from "../Form/Input";
-import Button from "../Form/Button";
-import Error from "../Helper/Error";
+import Input from "../../Components/Form/Input";
+import Button from "../../Components/Form/Button";
+import Error from "../../Components/Helper/Error";
 import useForm from "../../Hooks/useForm";
 import useFetch from "../../Hooks/useFetch";
 import { PHOTO_POST } from "../../api";

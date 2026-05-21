@@ -1,20 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Input from "../Form/Input";
-import Button from "../Form/Button";
-import Error from "../Helper/Error";
+import Input from "../../Components/Form/Input";
+import Button from "../../Components/Form/Button";
+import Error from "../../Components/Helper/Error";
 import useForm from "../../Hooks/useForm";
 import UserContext from "../../createContext/UserContext";
-import styles from "./LoginForm.module.css"
-import stylesBtn from "../Form/Button.module.css"
-
+import styles from "./LoginForm.module.css";
+import stylesBtn from "../../Components/Form/Button.module.css";
 
 const LoginForm = () => {
   const username = useForm();
   const password = useForm();
 
-  const {userLogin, error, loading} = React.useContext(UserContext)
-  
+  const { userLogin, error, loading } = React.useContext(UserContext);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (username.validate() && password.validate()) {
@@ -25,19 +24,23 @@ const LoginForm = () => {
   return (
     <section className="animeLeft">
       <h1 className="title">Login</h1>
-      <form className={styles.form} onSubmit={handleSubmit} >
+      <form className={styles.form} onSubmit={handleSubmit}>
         <Input label="Usuário" type="text" id="username" {...username} />
         <Input label="Senha" type="password" id="password" {...password} />
         {loading ? <Button disabled>Carregando...</Button> : <Button>Entrar</Button>}
         <Error error={error} />
       </form>
 
-      <Link to={"/login/perdeu"} className={styles.perdeu}>Perdeu a Senha?</Link>
+      <Link to={"/login/perdeu"} className={styles.perdeu}>
+        Perdeu a Senha?
+      </Link>
 
       <div className={styles.cadastro}>
         <h2 className={styles.subtitle}>Cadastrar-se</h2>
         <p>Ainda não possui conta? Cadastre-se no site</p>
-        <Link to={"/login/criar"} className={stylesBtn.button}>Cadastro</Link>
+        <Link to={"/login/criar"} className={stylesBtn.button}>
+          Cadastro
+        </Link>
       </div>
     </section>
   );

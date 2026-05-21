@@ -1,11 +1,11 @@
 import React from "react";
-import Input from "../Form/Input";
-import Button from "../Form/Button";
+import Input from "../../Components/Form/Input";
+import Button from "../../Components/Form/Button";
 import useForm from "../../Hooks/useForm";
 import { USER_POST } from "../../api";
 import UserContext from "../../createContext/UserContext";
 import useFetch from "../../Hooks/useFetch";
-import Error from "../Helper/Error";
+import Error from "../../Components/Helper/Error";
 
 const LoginCreate = () => {
   const username = useForm();
@@ -34,7 +34,7 @@ const LoginCreate = () => {
         <Input label={"Email"} type="email" id="email" {...email} />
         <Input label={"Senha"} type="password" id="password" {...password} />
         {loading ? <Button disabled>Cadastrando...</Button> : <Button>Cadastrar</Button>}
-        <Error error={error}/>
+        <Error error={error} />
       </form>
     </section>
   );

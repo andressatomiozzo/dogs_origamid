@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "./Header.module.css";
 import { Link } from "react-router-dom";
-import DOGS from "../assets/dogs.svg?react";
-import UserContext from "../createContext/UserContext";
+import DOGS from "../../assets/dogs.svg?react";
+import UserContext from "../../createContext/UserContext";
 
 const Header = () => {
-  const { data} = React.useContext(UserContext);
+  const { data } = React.useContext(UserContext);
   return (
     <header className={styles.header}>
       <nav className={`${styles.nav} container`}>

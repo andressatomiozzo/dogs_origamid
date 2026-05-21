@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Header from "./Components/Header";
-import Footer from "./Components/Footer";
-import Home from "./Components/Home";
-import Login from "./Components/Login/Login";
+import Header from "./Pages/Initial/Header";
+import Footer from "./Pages/Initial/Footer";
+import Home from "./Pages/Initial/Home";
+import Login from "./Pages/Login/Login";
 import UserStorage from "./createContext/UserStorage";
-import User from "./Components/User/User";
+import User from "./Pages/User/User";
 import ProtectedRoute from "./Components/Helper/ProtectedRoute";
 
 const App = () => {
