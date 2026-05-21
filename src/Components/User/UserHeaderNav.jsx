@@ -5,11 +5,13 @@ import MinhasFotos from "../../assets/feed.svg?react";
 import Estatisticas from "../../assets/estatisticas.svg?react";
 import AdicionarFoto from "../../assets/adicionar.svg?react";
 import Sair from "../../assets/sair.svg?react";
-import styles from "./UserHeaderNav.module.css"
+import styles from "./UserHeaderNav.module.css";
+import useMedia from "../../Hooks/useMedia";
 
 const UserHeaderNav = () => {
-  const [mobile, setMobile] = React.useState(null);
   const { userLogout } = React.useContext(UserContext);
+  const mobile = useMedia("(max-width: 40rem)");
+  console.log(mobile)
   const navigate = useNavigate();
 
   const handleLogout = () => {
