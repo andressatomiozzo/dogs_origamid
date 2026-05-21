@@ -34,7 +34,7 @@ const UserStorage = ({ children }) => {
       setLogin(false);
     } finally {
       setLoading(false);
-    }
+    } 
   };
 
   const userLogout = React.useCallback(async () => {
@@ -62,7 +62,9 @@ const UserStorage = ({ children }) => {
           userLogout();
         } finally {
           setLoading(false);
-        }
+        } 
+      } else {
+        setLogin(false);
       }
     };
 
