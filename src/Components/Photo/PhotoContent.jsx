@@ -1,10 +1,9 @@
-import React from "react";
 import styles from "./PhotoContent.module.css";
 import { Link } from "react-router-dom";
-import PhotoComents from "./PhotoComents";
+import PhotoComments from "./PhotoComments";
 
 const PhotoContent = ({ data }) => {
-  const { photo, coments } = data;
+  const { photo, comments } = data;
   return (
     <div className={styles.photo}>
       <div className={styles.img}>
@@ -25,7 +24,7 @@ const PhotoContent = ({ data }) => {
           </ul>
         </div>
       </div>
-      <PhotoComents id={photo.id} comments={coments} />
+      <PhotoComments id={photo.id} comments={comments} />
     </div>
   );
 };
