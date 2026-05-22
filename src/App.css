@@ -23,6 +23,7 @@ h4, p {
 ul, li {
   padding: 0px;
   margin: 0px;
+  list-style: none;
 }
 
 a {
@@ -46,6 +47,10 @@ button, input {
   max-width: 50rem;
   padding: 0 1rem;
   margin: 0 auto;
+}
+
+.mainContainer{
+  margin-top: 4rem;
 }
 
 .title {
