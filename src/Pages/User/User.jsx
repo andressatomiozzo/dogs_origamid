@@ -5,17 +5,18 @@ import UserPhotoPost from "./UserPhotoPost";
 import UserStats from "./UserStats";
 import UserContext from "../../createContext/UserContext";
 import React from "react";
+import NotFound from "../../Components/NotFound";
 
 const User = () => {
   const { data } = React.useContext(UserContext);
-  console.log("data:", data)
   return (
     <section className="container">
       <UserHeader />
       <Routes>
-        <Route path="/" element={<Feed user={data && data.id}/>} />
+        <Route path="/" element={<Feed user={data && data.id} />} />
         <Route path="postar" element={<UserPhotoPost />} />
         <Route path="estatisticas" element={<UserStats />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </section>
   );
