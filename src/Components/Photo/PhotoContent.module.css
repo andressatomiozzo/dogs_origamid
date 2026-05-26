@@ -12,6 +12,11 @@
   animation: scaleUp 0.3s forwards;
 }
 
+.single.photo{
+  grid-template-columns: 1fr;
+  height: auto;
+}
+
 @keyframes scaleUp {
   to {
     opacity: 1;
@@ -23,12 +28,19 @@
   padding: 2rem 2rem 0 2rem;
 }
 
+.single .details {
+  padding: 1rem 0 0 0;
+}
+
 .img {
   grid-row: 1/4;
 }
 
-.coments {
-  padding: 0 2rem;
+.single .img{
+  grid-row: 1;
+  border-radius: .4rem;
+  overflow: hidden;
+
 }
 
 @media (max-width: 64rem) {
@@ -37,6 +49,11 @@
     max-height: calc(100vh - 4rem);
     overflow-y: auto;
     grid-template-columns: minmax(20rem, 40rem);
+  }
+
+  .single.photo{
+    overflow-y: hidden;
+    max-height: fit-content;
   }
 
   .img {
