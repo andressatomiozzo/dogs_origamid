@@ -1,5 +1,6 @@
 export const API_URL = "https://dogsapi.origamid.dev/json";
 
+// Solicita o token do usuario após autenticação
 export const TOKEN_POST = (body) => {
   return {
     url: API_URL + "/jwt-auth/v1/token",
@@ -13,6 +14,7 @@ export const TOKEN_POST = (body) => {
   };
 };
 
+// Verifica se o token é valido
 export const TOKEN_VALIDATE_POST = (token) => {
   return {
     url: API_URL + "/jwt-auth/v1/token/validate",
@@ -25,6 +27,7 @@ export const TOKEN_VALIDATE_POST = (token) => {
   };
 };
 
+// Solicita os dados do usuário após informar o token
 export const USER_GET = (token) => {
   return {
     url: API_URL + "/api/user",
@@ -37,6 +40,7 @@ export const USER_GET = (token) => {
   };
 };
 
+// Cadastrar um usuario
 export const USER_POST = (body) => {
   return {
     url: API_URL + "/api/user",
@@ -50,6 +54,7 @@ export const USER_POST = (body) => {
   };
 };
 
+// Envia as fotos do formulario para a API
 export const PHOTO_POST = (formData, token) => {
   return {
     url: API_URL + "/api/photo",
@@ -63,6 +68,7 @@ export const PHOTO_POST = (formData, token) => {
   };
 };
 
+// Solicita as fotos da API de acordo com os parametros passados
 export const PHOTOS_GET = ({ page, total, user }) => {
   return {
     url: `${API_URL}/api/photo?_page=${page}&_total=${total}&_user=${user}`,
@@ -73,6 +79,7 @@ export const PHOTOS_GET = ({ page, total, user }) => {
   };
 };
 
+// Solicita a foto da API de acordo com o ID
 export const PHOTO_GET = (id) => {
   return {
     url: `${API_URL}/api/photo/${id}`,
@@ -83,6 +90,7 @@ export const PHOTO_GET = (id) => {
   };
 };
 
+// Deleta uma foto de acordo com o ID
 export const PHOTO_DELETE = (id) => {
   return {
     url: `${API_URL}/api/photo/${id}`,
@@ -95,6 +103,7 @@ export const PHOTO_DELETE = (id) => {
   };
 };
 
+// Envia um comentário de acordo com o ID
 export const COMMENT_POST = (id, body) => {
   return {
     url: `${API_URL}/api/comment/${id}`,
@@ -108,3 +117,29 @@ export const COMMENT_POST = (id, body) => {
     },
   };
 };
+
+export function PASSWORD_LOST(body) {
+  return {
+    url: API_URL + '/api/password/lost',
+    options: {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body)
+    }
+  }
+}
+
+export function PASSWORD_RESET(body) {
+  return {
+    url: API_URL + '/api/password/reset',
+    options: {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body)
+    }
+  }
+}
