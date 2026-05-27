@@ -6,6 +6,7 @@ import { USER_POST } from "../../api";
 import UserContext from "../../createContext/UserContext";
 import useFetch from "../../Hooks/useFetch";
 import Error from "../../Components/Helper/Error";
+import Head from "../../Components/Helper/Head";
 
 const LoginCreate = () => {
   const username = useForm();
@@ -28,6 +29,7 @@ const LoginCreate = () => {
 
   return (
     <section className="animeLeft">
+      <Head title="Cadastro" />
       <h1 className="title">Cadastre-se</h1>
       <form onSubmit={handleSubmit}>
         <Input label={"Usuário"} type="text" id="username" {...username} />
