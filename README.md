@@ -1,6 +1,8 @@
 # 📌 DOGS
 
-Rede social para cachorros.
+```md
+![titulo](./public/logo_readme.png)
+```
 
 ---
 
@@ -8,26 +10,26 @@ Rede social para cachorros.
 
 * HTML 5
 * CSS 3
-* TypeScript
+* JavaScript
 * Vite
-* uuid
 * React
 * React Router
+* Victory
 
 ---
 
 ## 🎯 Funcionalidades
 
-* [ ] Adicionar tarefas
-* [ ] Remover tarefas
-* [ ] Marcar como concluída
-* [ ] Persistência de dados (localStorage / API)
+* [ ] Cadastro, login e logout de usuário
+* [ ] Resetar senha
+* [ ] Feed de fotos
+* [ ] Postar uma foto
+* [ ] Comentar nas fotos
+* [ ] Analisar as estatísticas do perfil (acessos)
 
 ---
 
 ## 📸 Preview
-
-*(adicione um print ou GIF do projeto aqui)*
 
 ```md
 ![preview](./public/preview.png)
@@ -37,6 +39,7 @@ Rede social para cachorros.
 
 ## 👤 Como interagir com o projeto
 
+É possível acessar com um usário padrão, ou criar o seu.
 Usuário padrão: dog
 Senha: dog
 
@@ -48,10 +51,7 @@ Senha: dog
 
 ```bash
 # Clonar o repositório
-git clone https://github.com/andressatomiozzo/react.git
-
-# Entrar na pasta
-cd nome-do-projeto
+git clone https://github.com/andressatomiozzo/dogs_origamid.git
 
 # Instalar dependências
 npm install
@@ -64,11 +64,14 @@ npm run dev
 
 ## 🧠 Aprendizados
 
-* Trabalhar com estado no React
+* React Hooks e Custom Hooks
 * Manipulação de DOM
+* Utilização de formulários
 * Consumo de API
-* Organização de código
 * Utilização de variáveis globais (createContext e useContext)
+* Navegação - React Router
+* CSS module
+* Organização de código
 
 ---
 
@@ -81,5 +84,5 @@ npm run dev
 
 ## 🙋‍♀️ Autora
 
-Feito por Andressa Tomiozzo 💙
+Feito por Andressa Tomiozzo no curso de React na Origamid. 
 [LinkedIn](https://www.linkedin.com/in/andressa-tomiozzo/)
