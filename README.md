@@ -1,7 +1,7 @@
 # 📌 DOGS
 
 ```md
-![titulo](public/logo_readme.png)
+![titulo](./assets/logo_readme.png)
 ```
 
 ---
@@ -32,7 +32,7 @@
 ## 📸 Preview
 
 ```md
-![preview](public/preview.png)
+![preview](./assets/preview.png)
 ```
 
 ---
