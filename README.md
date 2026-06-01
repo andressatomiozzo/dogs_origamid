@@ -1,6 +1,6 @@
 # 📌 DOGS
 
-![titulo](https://raw.githubusercontent.com/andressatomiozzo/dogs_origamid/main/src/assets/logo_readme.png)
+![titulo](./assets/logo_readme.png)
 
 ---
 
@@ -29,9 +29,7 @@
 
 ## 📸 Preview
 
-```md
 ![preview](./assets/preview.png)
-```
 
 ---
 
