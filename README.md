@@ -1,6 +1,6 @@
 # 📌 DOGS
 
-![titulo](./assets/logo_readme.png)
+![titulo](./src/assets/logo_readme.png)
 
 ---
 
@@ -29,7 +29,7 @@
 
 ## 📸 Preview
 
-![preview](./assets/preview.png)
+![preview](./src/assets/preview.png)
 
 ---
 
