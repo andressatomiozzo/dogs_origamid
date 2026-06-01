@@ -1,7 +1,7 @@
 # 📌 DOGS
 
 ```md
-![titulo](./assets/logo_readme.png)
+![titulo](./src/assets/logo_readme.png)
 ```
 
 ---
