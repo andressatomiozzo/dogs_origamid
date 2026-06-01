@@ -1,8 +1,6 @@
 # 📌 DOGS
 
-```md
 ![titulo](https://raw.githubusercontent.com/andressatomiozzo/dogs_origamid/main/src/assets/logo_readme.png)
-```
 
 ---
 
