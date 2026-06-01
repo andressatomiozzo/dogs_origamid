@@ -1,7 +1,7 @@
 # 📌 DOGS
 
 ```md
-![titulo](https://github.com/andressatomiozzo/dogs_origamid/blob/main/src/assets/logo_readme.png)
+![titulo](https://raw.githubusercontent.com/andressatomiozzo/dogs_origamid/main/src/assets/logo_readme.png)
 ```
 
 ---
