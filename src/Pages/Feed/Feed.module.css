@@ -15,6 +15,11 @@
   transition: 0.1s;
 }
 
+.filter{
+  background-color: #ffffff;
+  border-color: #cecece;
+}
+
 .options {
   display: flex;
   justify-content: space-around;

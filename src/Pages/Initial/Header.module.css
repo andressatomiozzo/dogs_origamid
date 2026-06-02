@@ -34,3 +34,23 @@
   position: relative;
   top: -1px;
 }
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search input {
+  margin-top: 10px;
+}
+
+.search button{
+  background-color: transparent;
+  border: none;
+  width: 25px;
+  height: 25px;
+  background: url("../../assets/search.svg") no-repeat;
+  background-size: cover ;
+  cursor: pointer;
+}
