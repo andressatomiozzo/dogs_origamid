@@ -1,0 +1,38 @@
+.filterWrapper {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  margin-bottom: 2rem;
+}
+
+.filter,
+.options button {
+  background-color: #eee;
+  border-radius: 0.2rem;
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  transition: 0.1s;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.options {
+  display: flex;
+  justify-content: space-around;
+}
+
+.filter:focus,
+.filter:hover,
+.options button:hover,
+.options button:focus,
+.activeBtn {
+  outline: none;
+  background-color: white !important;
+  box-shadow: 0 0 0 3px #fea;
+  border-color: #fb1;
+  color: #764701;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+}
