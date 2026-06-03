@@ -20,7 +20,6 @@ const useFetch = () => {
       setError(err.message);
     } finally {
       setData(json);
-      console.log(json)                                       // Ao fim tirar isso aqui
       setLoading(false);
     }
   }, []);

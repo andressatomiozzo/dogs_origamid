@@ -21,10 +21,20 @@
   .photoPost {
     grid-template-columns: 1fr;
   }
-  
+
   .preview::after {
     content: "";
     display: block;
     padding: 50%;
+  }
+  
+  .photoPost form {
+    width: 300px;
+  }
+}
+
+@media (max-width: 400px) {
+  .photoPost input {
+    max-width: 100%;
   }
 }
