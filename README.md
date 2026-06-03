@@ -1,6 +1,17 @@
-# 📌 DOGS
+# 📌 Dogs
 
 ![titulo](./src/assets/logo_readme.png)
+
+<br>
+
+## 👤 Como interagir com o projeto
+
+Acesse o [link do site hospedado na Vercel](https://dogs-wine.vercel.app/)<br>
+É possível acessar com um usário padrão, ou criar o seu.\
+Usuário padrão: dog
+Senha: dog
+
+* O site é construído a partir de uma API pública, dados não padrão adicionados são excluídos a cada 10 minutos.
 
 <br>
 
@@ -33,32 +44,6 @@
 
 <br>
 
-## 👤 Como interagir com o projeto
-
-Acesse o [Link](https://dogs-wine.vercel.app/)
-É possível acessar com um usário padrão, ou criar o seu.\
-Usuário padrão: dog
-Senha: dog
-
-* O site é construído a partir de uma API pública, dados não padrão adicionados são excluídos a cada 10 minutos.
-
-<br>
-
-## ⚙️ Como rodar o projeto
-
-```bash
-# Clonar o repositório
-git clone https://github.com/andressatomiozzo/dogs_origamid.git
-
-# Instalar dependências
-npm install
-
-# Rodar o projeto
-npm run dev
-```
-
-<br>
-
 ## 🧠 Aprendizados
 
 * React Hooks e Custom Hooks
@@ -77,6 +62,13 @@ npm run dev
 * [ ] Testes automatizados
 * [ ] TypeScript
 * [ ] Dark mode
+
+<br>
+
+## ⚙️ Features que eu adicionei
+
+* [ ] Filtro para as fotos do Feed
+* [ ] Busca de usuário
 
 <br>
 

@@ -8,13 +8,13 @@
   cursor: pointer;
   border-radius: 0.4rem;
   transition: 0.1s;
-  color: #000000;
+  color: var(--text);
 }
 
 .delete:focus,
 .delete:hover {
   outline: none;
-  background-color: white;
-  box-shadow: 0 0 0 3px #eee;
-  border-color: #333;
+  background-color: var(--background);
+  box-shadow: 0 0 0 3px var(--background-2);
+  border-color: var(--text);
 }

@@ -1,9 +1,10 @@
 .header {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1); */
+  border-bottom: 1px solid var(--background-2);
   position: fixed;
   width: 100%;
   z-index: 100;
-  background-color: white;
+  background-color: var(--background);
   top: 0px;
 }
 
@@ -16,29 +17,7 @@
 
 .logo {
   padding: 0.5rem 0;
-}
-
-.login {
-  color: #333;
-  display: flex;
-  align-items: center;
-}
-
-.login::after {
-  content: "";
-  display: inline-block;
-  width: 14px;
-  height: 17px;
-  background: url("../Assets/usuario.svg") no-repeat center center;
-  margin-left: 0.5rem;
-  position: relative;
-  top: -1px;
-}
-
-.search {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  color: var(--text);
 }
 
 .search input {
@@ -50,7 +29,55 @@
   border: none;
   width: 25px;
   height: 25px;
-  background: url("../../assets/search.svg") no-repeat;
   background-size: cover ;
   cursor: pointer;
+  background-color: var(--text);
+
+  mask: url("../../assets/search.svg") no-repeat center;
+  mask-size: contain;
+
+  -webkit-mask: url("../../assets/search.svg") no-repeat center;
+  -webkit-mask-size: contain;
+}
+
+.userPreference{
+  display: flex;
+}
+
+.btn{
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  margin-top: -5px;
+}
+
+.login {
+  color: var(--text);
+  display: flex;
+  align-items: center;
+}
+
+.login::after {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 17px;
+  /* background: url("../../assets/usuario.svg") no-repeat center center; */
+  margin-left: 0.5rem;
+  position: relative;
+  top: -1px;
+
+  background-color: var(--text);
+
+  mask: url("../../assets/usuario.svg") no-repeat center;
+  mask-size: contain;
+
+  -webkit-mask: url("../../assets/usuario.svg") no-repeat center;
+  -webkit-mask-size: contain;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }

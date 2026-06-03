@@ -2,7 +2,7 @@
   margin: auto;
   height: 36rem;
   border-radius: 0.2rem;
-  background-color: white;
+  background-color: var(--background);
   display: grid;
   grid-template-columns: 36rem 20rem;
   grid-template-rows: auto 1fr auto;

@@ -11,32 +11,35 @@ import Photo from "./Components/Photo/Photo";
 import UserProfile from "./Pages/User/UserProfile";
 import NotFound from "./Components/NotFound";
 import UserError from "./Pages/User/UserError";
+import ThemeProvider from "./createContext/ThemeProvider";
 
 const App = () => {
   return (
     <div className="App">
       <BrowserRouter>
         <UserStorage>
-          <Header />
-          <main className="AppBody">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="login/*" element={<Login />} />
-              <Route
-                path="conta/*"
-                element={
-                  <ProtectedRoute>
-                    <User />
-                  </ProtectedRoute>
-                }
-              />
-              <Route path="foto/:id" element={<Photo />} />
-              <Route path="perfil/:user" element={<UserProfile />} />
-              <Route path="userNotFound" element={<UserError />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </main>
-          <Footer />
+          <ThemeProvider>
+            <Header />
+            <main className="AppBody">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="login/*" element={<Login />} />
+                <Route
+                  path="conta/*"
+                  element={
+                    <ProtectedRoute>
+                      <User />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route path="foto/:id" element={<Photo />} />
+                <Route path="perfil/:user" element={<UserProfile />} />
+                <Route path="userNotFound" element={<UserError />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </main>
+            <Footer />
+          </ThemeProvider>
         </UserStorage>
       </BrowserRouter>
     </div>

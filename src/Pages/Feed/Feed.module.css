@@ -6,7 +6,7 @@
 
 .filter,
 .options button {
-  background-color: #eee;
+  background-color: var(--background-2);
   border-radius: 0.2rem;
   padding: 5px 10px;
   border: 1px solid transparent;
@@ -16,8 +16,8 @@
 }
 
 .filter{
-  background-color: #ffffff;
-  border-color: #cecece;
+  background-color: var(--background-2);
+  border-color: var(--background);
 }
 
 .options {
@@ -31,10 +31,10 @@
 .options button:focus,
 .activeBtn {
   outline: none;
-  background-color: white !important;
-  box-shadow: 0 0 0 3px #fea;
-  border-color: #fb1;
-  color: #764701;
+  background-color: var(--background) !important;
+  box-shadow: 0 0 0 3px var(--secondary);
+  border-color: var(--primary);
+  color: var(--text-2);
 }
 
 .options {

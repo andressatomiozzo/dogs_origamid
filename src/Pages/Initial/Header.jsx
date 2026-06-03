@@ -7,9 +7,11 @@ import Input from "../../Components/Form/Input";
 import useForm from "../../Hooks/useForm";
 import { PHOTOS_GET } from "../../api";
 import useFetch from "../../Hooks/useFetch";
+import ThemeContext from "../../createContext/ThemeContext";
 
 const Header = () => {
   const user = React.useContext(UserContext);
+  const { theme, toggleTheme } = React.useContext(ThemeContext);
   const search = useForm();
   const { request } = useFetch();
   const navigate = useNavigate();
@@ -26,14 +28,14 @@ const Header = () => {
         navigate(`/userNotFound`);
       }
     }
-    search.setValue("")
+    search.setValue("");
   };
 
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${user.dark ? "dark" : null}`}>
       <nav className={`${styles.nav} container`}>
         <Link to="/" className={styles.logo} aria-label="Dogs - Home">
-          <DOGS />
+          <DOGS/>
         </Link>
 
         <form onSubmit={handleSearchSubmit} className={styles.search}>
@@ -41,15 +43,21 @@ const Header = () => {
           <button aria-label="Buscar"></button>
         </form>
 
-        {user.data ? (
-          <Link to="conta" className={styles.login}>
-            {user.data.nome}
-          </Link>
-        ) : (
-          <Link to="login" className={styles.login}>
-            Login / Criar
-          </Link>
-        )}
+        <div className={styles.userPreference}>
+          {user.data ? (
+            <Link to="conta" className={styles.login}>
+              {user.data.nome}
+            </Link>
+          ) : (
+            <Link to="login" className={styles.login}>
+              Login / Criar
+            </Link>
+          )}
+
+          <button onClick={toggleTheme} className={styles.btn}>
+            {theme === "light" ? "🌙" : "☀️"}
+          </button>
+        </div>
       </nav>
     </header>
   );
