@@ -1,13 +1,13 @@
 import React from "react";
-import styles from "./Header.module.css";
 import { Link, useNavigate } from "react-router-dom";
-import DOGS from "../../assets/dogs.svg?react";
-import UserContext from "../../createContext/UserContext";
-import Input from "../../Components/Form/Input";
-import useForm from "../../Hooks/useForm";
-import { PHOTOS_GET } from "../../api";
-import useFetch from "../../Hooks/useFetch";
+import styles from "./Header.module.css";
 import ThemeContext from "../../createContext/ThemeContext";
+import UserContext from "../../createContext/UserContext";
+import useForm from "../../Hooks/useForm";
+import useFetch from "../../Hooks/useFetch";
+import Input from "../../Components/Form/Input";
+import { PHOTOS_GET } from "../../api";
+import DOGS from "../../assets/dogs.svg?react";
 
 const Header = () => {
   const user = React.useContext(UserContext);

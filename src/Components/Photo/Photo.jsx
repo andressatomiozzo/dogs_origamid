@@ -1,11 +1,11 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import useFetch from "../../Hooks/useFetch";
-import { PHOTO_GET } from "../../api";
 import PhotoContent from "./PhotoContent";
 import Error from "../Helper/Error";
 import Loading from "../Helper/Loading";
 import Head from "../Helper/Head";
+import useFetch from "../../Hooks/useFetch";
+import { PHOTO_GET } from "../../api";
 
 const Photo = () => {
   const { id } = useParams();

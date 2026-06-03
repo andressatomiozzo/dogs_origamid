@@ -1,9 +1,9 @@
 import React from "react";
 import FeedPhotosItem from "./FeedPhotosItem";
 import useFetch from "../../Hooks/useFetch";
-import { PHOTOS_GET } from "../../api";
 import Error from "../../Components/Helper/Error";
 import Loading from "../../Components/Helper/Loading";
+import { PHOTOS_GET } from "../../api";
 
 const FeedPhotos = ({ setModalPhoto, user, page, setInfinite, setTotalPhotos }) => {
   const { data, loading, error, request } = useFetch();

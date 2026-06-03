@@ -1,10 +1,10 @@
 import React from "react";
-import styles from "./PhotoContent.module.css";
 import { Link } from "react-router-dom";
+import styles from "./PhotoContent.module.css";
 import PhotoComments from "./PhotoComments";
-import UserContext from "../../createContext/UserContext";
 import PhotoDelete from "./PhotoDelete";
 import Image from "../Helper/Image";
+import UserContext from "../../createContext/UserContext";
 
 const PhotoContent = ({ data, single }) => {
   const { photo, comments } = data;

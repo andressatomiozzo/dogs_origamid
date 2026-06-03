@@ -1,7 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
 import FeedModal from "./FeedModal";
 import FeedPhotos from "./FeedPhotos";
-import PropTypes from "prop-types";
 import FeedPhotosFilter from "./FeedPhotosFilter";
 import styles from "./Feed.module.css";
 

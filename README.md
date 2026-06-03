@@ -61,7 +61,6 @@ Senha: dog
 
 * [ ] Testes automatizados
 * [ ] TypeScript
-* [ ] Dark mode
 
 <br>
 
@@ -69,6 +68,7 @@ Senha: dog
 
 * [ ] Filtro para as fotos do Feed
 * [ ] Busca de usuário
+* [ ] Dark mode
 
 <br>
 

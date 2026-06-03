@@ -1,10 +1,10 @@
+import React from "react";
 import { Routes, Route } from "react-router-dom";
 import UserHeader from "./UserHeader";
-import Feed from "../Feed/Feed";
 import UserPhotoPost from "./UserPhotoPost";
 import UserStats from "./UserStats";
+import Feed from "../Feed/Feed";
 import UserContext from "../../createContext/UserContext";
-import React from "react";
 import NotFound from "../../Components/NotFound";
 import Head from "../../Components/Helper/Head";
 

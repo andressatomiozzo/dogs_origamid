@@ -1,12 +1,12 @@
 import React from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import styles from "./UserHeaderNav.module.css";
 import UserContext from "../../createContext/UserContext";
+import useMedia from "../../Hooks/useMedia";
 import MinhasFotos from "../../assets/feed.svg?react";
 import Estatisticas from "../../assets/estatisticas.svg?react";
 import AdicionarFoto from "../../assets/adicionar.svg?react";
 import Sair from "../../assets/sair.svg?react";
-import styles from "./UserHeaderNav.module.css";
-import useMedia from "../../Hooks/useMedia";
 
 const UserHeaderNav = () => {
   const { userLogout } = React.useContext(UserContext);
